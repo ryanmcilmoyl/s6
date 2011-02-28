@@ -253,12 +253,12 @@ function toggle()
  
       var $controls = $( '#controls' )
     
-   	 $controls.html(  '<div id="navLinks">' 
+   	 $controls.html(  '<nav id="navLinks">' 
 	    + '<a accesskey="t" id="toggle" href="#">&#216;<\/a>' 
 	    + '<a accesskey="z" id="prev" href="#">&laquo;<\/a>' 
 	    + '<a accesskey="x" id="next" href="#">&raquo;<\/a>' 
 	    + '<div id="navList"><select id="jumplist" /><\/div>' 
-	    + '<\/div>' ); 
+	    + '<\/nav>' ); 
       
       $controls.hover( function() { showHide('s') }, function() { showHide('h') });
       $('#toggle').click( function() { toggle(); } );
@@ -280,7 +280,7 @@ function toggle()
   
   function toggleFooter()
   {
-     $( '#footer').toggle(); 
+     $( 'footer').toggle(); 
   }
   
   
@@ -300,8 +300,7 @@ function toggle()
 			case 34: // page down
 			case 39: // rightkey
 			case 40: // downkey
-				
-        var csteps = settings.steps[settings.snum-1]; /* current slide steps array */
+				var csteps = settings.steps[settings.snum-1]; /* current slide steps array */
         
 				if ( !csteps || settings.incpos >= csteps.length ) {
 					go(1);
@@ -313,13 +312,13 @@ function toggle()
 			case 37: // leftkey
 			case 38: // upkey
 					
-					if( !settings.steps[settings.snum-1] || settings.incpos <= 0 ) {
-					  go(-1);
-				  } else {
-					  subgo(-1);
-					}
-				  break;
-      case 36: // home
+				if( !settings.steps[settings.snum-1] || settings.incpos <= 0 ) {
+					go(-1);
+				} else {
+					subgo(-1);
+				}
+				break;
+			case 36: // home
 				goTo(1);
 				break;
 			case 35: // end
@@ -328,20 +327,20 @@ function toggle()
 			case 67: // c
 				showHide('c');  // toggle controls (navlinks,navlist)
 				break;
-      case 65: //a
+			case 65: //a
 			case 80: //p
 			case 83: //s
 				toggleAutoplay();
 				break;
-      case 70: //f
-        toggleFooter();
-        break;
-      case 78: // n
-        toggleSlideNumber();
-        break;
-      case 68: // d
-        toggleDebug();
-        break;
+			case 70: //f
+				toggleFooter();
+				break;
+			case 78: // n
+				toggleSlideNumber();
+				break;
+			case 68: // d
+				toggleDebug();
+				break;
 		}
 	}
 }

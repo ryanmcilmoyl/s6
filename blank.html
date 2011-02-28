@@ -38,26 +38,33 @@
 <body>
 
 <div class="layout">
-  <div id="header"></div>
-  <div id="footer">
-    <h1>[your_footer_here]</h1>
-    <h2>[your_subfooter_here]</h2>
-  </div>
+  <header>
+  	<hgroup>
+		<h1>[your_header_here]</h1>
+		<h2>[your_subheader_here]</h2>
+	</hgroup>
+  </header>
+  <footer>
+  	<hgroup>
+		<h1>[your_footer_here]</h1>
+		<h2>[your_subfooter_here]</h2>
+	</hgroup>
+  </footer>
 </div>
 
-<div class="presentation">
+<article class="presentation">
 
   <!-- add slides here; example -->
   
-  <div class='slide cover'>
+  <section class='slide cover'>
     <h1>Your Slide Title Here</h1>
     <ul>
       <li>Item One Here</li>
       <li>Item Two Here</li>
     </ul>
-  </div>
+  </section>
 
-  <div class='slide'>
+  <section class='slide'>
     <h1>Steps Demos</h1>
 
     <!-- mark list with class step to mark all items at once -->
@@ -75,24 +82,24 @@
     <!-- or mark paragraphs, div blocks or whatever -->
     <p class='step'>Another Step</p>
 
-  </div>
+  </section>
 
-  <div class='slide'>
+  <section class='slide'>
     <h1>Another Slide Title Here</h1>
     <p>yada yada yada</p>
-  </div>
+  </section>
 
   <!-- h1.fullscreen -> use only centered heading with no content/body -->
-  <div class='slide'>
+  <section class='slide'>
     <h1 class='fullscreen'>Another Slide - Using Fullscreen Heading</h1>
-  </div>
+  </section>
 
   <!-- h1.hidden -> use heading just for table of contents (toc) -->
-  <div class='slide'>
-    <h1 class='hidden'>Another Slide - Using Hidden Heading</h1>
-    <p>Add Your Centered Image Here or Whatever</p>
-   </div>
+	<section class='slide'>
+		<h1 class='hidden'>Another Slide - Using Hidden Heading</h1>
+		<p>Add Your Centered Image Here or Whatever</p>
+	</section>
 
-</div> <!-- presentation -->
+</article> <!-- presentation -->
 </body>
 </html>
