@@ -1,4 +1,6 @@
 # Komodo Project Files
 
 *.kpf
+# VIM swp files
+*.swp
 
