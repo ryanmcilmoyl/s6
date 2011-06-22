@@ -529,5 +529,6 @@ function addSlideIds() {
      doDebug();
                 
    document.onkeyup = keys;
+   goTo(1);
 
 } // end Slideshow
